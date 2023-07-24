@@ -8,7 +8,7 @@ The Server Management App is a web application built using Spring Boot and Angul
 
 Before you begin, ensure you have the following installed:
 
-- Java Development Kit (JDK) 8 or higher ( I used Java 17)
+- Java Development Kit (JDK) 8 or higher ( I used Java 20 and Java SE 20)
 - Node.js and npm (Node Package Manager)
 - Angular CLI (Command Line Interface)
 
