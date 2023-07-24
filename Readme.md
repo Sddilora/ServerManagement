@@ -25,7 +25,7 @@ cd ServerManagement
 
 ```bash
 cd Backend
-run the spring boot application
+.\mvnw.cmd spring-boot:run
 ```
 
 3. Build the frontend
