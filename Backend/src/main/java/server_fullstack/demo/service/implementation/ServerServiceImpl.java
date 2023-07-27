@@ -72,9 +72,10 @@ public class ServerServiceImpl implements ServerService {
     private String setServerImageUrl() {
         String[] imageNames = { "server1.png","server2.png","server3.png","server4.png" };
         return ServletUriComponentsBuilder.fromCurrentContextPath().path("/server/image/" + imageNames[new Random().nextInt(4)]).toUriString();
+        // We gave 4 in here so the choice will be between our 4 photo and not cause an error.
     }
 }
-
+ 
 // @RequiredArgsConstrucor: lumbok is gonna create a constructor 
 // and then its gonna put the "private final ServerRepo serverRepo;" field
 // inside of the constructor. And it's going to be our dependency injection.

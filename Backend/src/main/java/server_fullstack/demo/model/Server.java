@@ -12,7 +12,7 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Column;
 import jakarta.validation.constraints.NotEmpty;
 
-
+ 
 import static jakarta.persistence.GenerationType.AUTO;
 
 @Entity

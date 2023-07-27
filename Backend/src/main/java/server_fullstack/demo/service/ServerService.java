@@ -20,6 +20,6 @@ public interface ServerService {
     // Deletes a server by id (since its unique)
     Boolean delete(Long id);
 }
-
+ 
 // This is an interface so we're not really implementing anything,
 // This is just functionalities that we are laying down, that we want to have in the application.
