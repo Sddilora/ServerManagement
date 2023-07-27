@@ -104,7 +104,7 @@ public class ServerResource {
     // we are indicating what will be produced in here because the default is json but we need png.
     @GetMapping(path = "/image/{fileName}", produces = IMAGE_PNG_VALUE ) // since I use more than one parameter I indicate the parameters key.
     public byte[] getServerImage(@PathVariable("fileName") String fileName) throws IOException{
-        return Files.readAllBytes(Paths.get(System.getProperty("user.home") + "Downloads/images" + fileName)); // TODO change this to relative path
+        return Files.readAllBytes(Paths.get("images/" + fileName));
     }
 }
 // @Valid checks the annotation in the Server class ( this one: @NotEmpty(message = "IP Address cannot be empty or null") private String ipAddress;) )
