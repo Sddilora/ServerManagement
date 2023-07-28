@@ -9,10 +9,10 @@
 ### What does the term "Bean" means?
 
 - In the context of the Spring Framework, a "bean" is an object that is managed by the Spring IoC (Inversion of Control) container.
-- It is an instance of a Java class that is created, configured, and assembled by the container. 
+- It is an instance of a Java class that is created, configured, and assembled by the container.
 - Beans are the fundamental building blocks of a Spring application, and the Spring container is responsible for managing the lifecycle and dependencies of these beans.
   
-### Key characteristics of beans in the Spring Framework:
+### Key characteristics of beans in the Spring Framework
 
 1. Managed by the Spring IoC container: Instead of creating objects directly using the new keyword, you define bean definitions in the Spring configuration, and the container handles the instantiation.
 2. Dependency Injection: Spring supports dependency injection, where beans can have dependencies on other beans. Objects define their dependencies, and the container injects them when it creates the bean.
