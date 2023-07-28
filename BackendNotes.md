@@ -1,4 +1,4 @@
-# This file contains the terms and explanatanions of the terms used in the project.
+# This file contains the terms and explanatanions of the terms used in the project's backend part
 
 ## Index
 
