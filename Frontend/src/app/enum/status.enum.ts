@@ -1,3 +1,5 @@
 export enum Status {
-  ALL
+  ALL = 'ALL',
+  SERVER_UP = 'SERVER_UP',
+  SERVER_DOWN = 'SERVER_DOWN'
 }

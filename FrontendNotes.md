@@ -19,6 +19,8 @@
 // A minimal angular component
 import { Component } from '@angular/core';
 
+// component decorator indicates that the following class is a component.
+// @Component() also provides metadata about the component, including its selector, templates, and styles.
 @Component({
   selector: 'hello-world',
   template: `
@@ -37,6 +39,10 @@ To use this component, we write the following in a template:
 <hello-world></hello-world>
 ```
 
+#### Component Selector
+
+- The selector, identifies the component. By convention, Angular component selectors begin with the prefix app- (app-product-alerts), followed by the component name.
+  
 ### Templates
 
 - Templates are used to define a component's user interface.
