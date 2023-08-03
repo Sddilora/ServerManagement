@@ -46,6 +46,7 @@ export class ServerService {
         console.log(response);
         subscriber.next(  // We need to call next() method to let the subscriber know that we have a new value
           status === Status.ALL ? { ...response, message: `Servers filtered by ${status} status` } :
+          response.data && response.data.servers ?
           {
             ...response, // spread operator, it copies all the properties of the response object
             message: response.data.servers
@@ -53,6 +54,7 @@ export class ServerService {
             `Servers filtered by ${status === Status.SERVER_UP ? 'SERVER UP' : 'SERVER DOWN'} status` : `No servers with ${status} status found`,
             data: { servers: response.data.servers.filter(server => server.status === status)}
           }
+          : { ...response, message: 'No servers found', data: { servers: [] } }
         );
         subscriber.complete(); // We need to call complete() method to let the subscriber know that we are done
       }
