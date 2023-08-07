@@ -39,7 +39,7 @@ npm start
 ## Usage
 
 1. Run the Spring Boot backend and Angular frontend as instructed in the Installation section.
-2. Access the application in your web browser at <http://localhost:port>.
+2. Access the application in your web browser at <http://localhost:4200>.
 3. Log in with your credentials to access the server management dashboard.
 4. Explore the various features and functionalities of the application.
 
