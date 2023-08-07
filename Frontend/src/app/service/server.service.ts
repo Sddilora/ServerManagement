@@ -8,7 +8,7 @@ import { Status } from '../enum/status.enum';
 @Injectable({ providedIn: 'root' })
 export class ServerService {
 
-  private readonly apiUrl = 'any';
+  private readonly apiUrl = 'http://localhost:8080';
 
   constructor(private http: HttpClient) { }
 
@@ -33,8 +33,8 @@ export class ServerService {
     catchError(this.handleError)
   )
 
-  ping$ = (ipAddress: string) => <Observable<CustomResponse>> //  servers$ returns an Observable of type CustomResponse
-  this.http.get<CustomResponse>(`${this.apiUrl}/server/ping/${ipAddress}`)
+  ping$ = (ipAddr: string) => <Observable<CustomResponse>> //  servers$ returns an Observable of type CustomResponse
+  this.http.get<CustomResponse>(`${this.apiUrl}/server/ping/${ipAddr}`)
   .pipe(
     tap(console.log),
     catchError(this.handleError)
@@ -45,7 +45,9 @@ export class ServerService {
       subscriber => {
         console.log(response);
         subscriber.next(  // We need to call next() method to let the subscriber know that we have a new value
-          status === Status.ALL ? { ...response, message: `Servers filtered by ${status} status` } :
+          status === Status.ALL ?
+          { ...response, message: `Servers filtered by ${status} status` }
+          :
           response.data && response.data.servers ?
           {
             ...response, // spread operator, it copies all the properties of the response object
@@ -54,7 +56,10 @@ export class ServerService {
             `Servers filtered by ${status === Status.SERVER_UP ? 'SERVER UP' : 'SERVER DOWN'} status` : `No servers with ${status} status found`,
             data: { servers: response.data.servers.filter(server => server.status === status)}
           }
-          : { ...response, message: 'No servers found', data: { servers: [] } }
+          :
+          {
+            ...response, message: 'No servers found', data: { servers: [] }
+          }
         );
         subscriber.complete(); // We need to call complete() method to let the subscriber know that we are done
       }
@@ -64,7 +69,7 @@ export class ServerService {
     catchError(this.handleError)
   )
   delete$ = (serverId: number) => <Observable<CustomResponse>> //  servers$ returns an Observable of type CustomResponse
-  this.http.get<CustomResponse>(`${this.apiUrl}/server/delete/${serverId}`)
+  this.http.delete<CustomResponse>(`${this.apiUrl}/server/delete/${serverId}`)
   .pipe(
     tap(console.log),
     catchError(this.handleError)
@@ -73,7 +78,10 @@ export class ServerService {
   // We are making this method private because we are not going to use it outside of this class
   private handleError(error: HttpErrorResponse): Observable<never> {
     console.log(error);
-    return throwError(() => new Error(`An error occurred :(. Error message: ${error.error.message} , Status code: ${error.status} `));
+    if (error.status === 0) {
+      return throwError(() => new Error(`Could not connect to the server. Please contact the administrator.`));
+    }
+    return throwError(() => new Error(`An error occurred :(. Error message: ${error.error.message} , Status code: ${error.status}, Error path: ${error.url}`));
   }
 }
 

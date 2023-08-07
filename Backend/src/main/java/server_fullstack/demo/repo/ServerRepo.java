@@ -10,7 +10,7 @@ import server_fullstack.demo.model.Server;
 
 public interface ServerRepo extends JpaRepository<Server, Long>{
     // Find server by the ip address
-    Server findByIpAddress(String ipAddress);  // They are unique so we can use ipAddress in here
+    Server findByIpAddr(String ipAddr);  // They are unique so we can use ipAddr in here
 }
  
 

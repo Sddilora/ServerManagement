@@ -33,6 +33,7 @@ cd Backend
 ```bash
 cd Frontend
 npm install
+npm start
 ```
 
 ## Usage

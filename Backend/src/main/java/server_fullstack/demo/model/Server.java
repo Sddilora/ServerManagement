@@ -25,7 +25,7 @@ public class Server {
     private Long id;
     @Column(unique = true) // constraint on this ip address so we can't have more than one ip address of the same number.
     @NotEmpty(message = "IP Address cannot be empty or null")
-    private String ipAddress;
+    private String ipAddr;
     private String name;
     private String memory;
     private String type;

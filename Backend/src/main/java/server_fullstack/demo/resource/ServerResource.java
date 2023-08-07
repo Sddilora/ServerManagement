@@ -15,6 +15,7 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.Map;
+import java.util.concurrent.TimeUnit;
 
 import static java.time.LocalDateTime.now;
 import static org.springframework.http.HttpStatus.OK;
@@ -36,6 +37,7 @@ public class ServerResource {
 
     @GetMapping("/list")
     public ResponseEntity<Response> getServers() {
+        TimeUnit.SECONDS.toSeconds(3);
         return ResponseEntity.ok(
             Response.builder()
                     .timeStamp(now())
@@ -47,9 +49,9 @@ public class ServerResource {
         );
     }
 
-    @GetMapping("/ping/{ipAddress}")
-    public ResponseEntity<Response> pingServer(@PathVariable("ipAddress") String ipAddress) throws IOException {
-        Server server = serverService.ping(ipAddress);
+    @GetMapping("/ping/{ipAddr}")
+    public ResponseEntity<Response> pingServer(@PathVariable("ipAddr") String ipAddr) throws IOException {
+        Server server = serverService.ping(ipAddr);
         return ResponseEntity.ok(
             Response.builder()
                     .timeStamp(now())
@@ -107,4 +109,4 @@ public class ServerResource {
         return Files.readAllBytes(Paths.get("images/" + fileName));
     }
 }
-// @Valid checks the annotation in the Server class ( this one: @NotEmpty(message = "IP Address cannot be empty or null") private String ipAddress;) )
+// @Valid checks the annotation in the Server class ( this one: @NotEmpty(message = "IP Address cannot be empty or null") private String ipAddr;) )

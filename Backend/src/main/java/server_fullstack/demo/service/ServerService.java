@@ -10,7 +10,7 @@ public interface ServerService {
     // This is gonna create the server and save it in the database
     Server create(Server server);
     // returns the server that we are pinging
-    Server ping(String ipAddress) throws IOException;
+    Server ping(String ipAddr) throws IOException;
     // List all the servers
     Collection<Server> list(int limit); // it returns the collection of servers
     // Takes the id of the server that we want to find

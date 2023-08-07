@@ -35,10 +35,10 @@ public class ServerServiceImpl implements ServerService {
     }
 
     @Override
-    public Server ping(String ipAddress) throws IOException {
-        log.info("Pinging server IP: {}", ipAddress);
-        Server server = serverRepo.findByIpAddress(ipAddress);
-        InetAddress address = InetAddress.getByName(ipAddress);
+    public Server ping(String ipAddr) throws IOException {
+        log.info("Pinging server IP: {}", ipAddr);
+        Server server = serverRepo.findByIpAddr(ipAddr);
+        InetAddress address = InetAddress.getByName(ipAddr);
         server.setStatus(address.isReachable(10000) ? Status.SERVER_UP : Status.SERVER_DOWN);
         serverRepo.save(server);  // save the updated status to db
         return server;
