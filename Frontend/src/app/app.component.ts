@@ -111,4 +111,16 @@ export class AppComponent implements OnInit {
         })
       );
   }
+
+  printReport(): void {
+    let dataType = 'application/vnd.ms-excel.sheet.macroEnabled.12';
+    let tableSelect = document.getElementById('servers');
+    let tableHTML = tableSelect!.outerHTML.replace(/ /g, '%20'); // Replace all white spaces with %20 // TODO: Handle the exclamaition marks in a better way
+    let downloadLink = document.createElement('a');
+    document.body.appendChild(downloadLink);
+    downloadLink.href = 'data:' + dataType + ', ' + tableHTML;
+    downloadLink.download = 'server-report.xls';
+    downloadLink.click();
+    document.body.removeChild(downloadLink);
+  }
 }
