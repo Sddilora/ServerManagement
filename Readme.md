@@ -42,8 +42,7 @@ npm start
 2. Provide the database password in the .env file in the Backend folder.
 3. Run the Spring Boot backend and Angular frontend as instructed in the Installation section.
 4. Access the application in your web browser at <http://localhost:4200>.
-5. Log in with your credentials to access the server management dashboard.
-6. Explore the various features and functionalities of the application.
+5. Explore the various features and functionalities of the application.
 
 ## Contributing
 
