@@ -44,27 +44,11 @@ npm start
 4. Access the application in your web browser at <http://localhost:4200>.
 5. Explore the various features and functionalities of the application.
 
-## Contributing
-
-Contributions are welcome! If you wish to contribute to this project, follow these steps:
-
-1. Fork the repository.
-2. Create a new branch for your feature/bug fix.
-3. Make your changes and commit them with descriptive messages.
-4. Push your changes to your branch.
-5. Create a pull request detailing your changes and their purpose.
-
-> For major changes, please open an issue first to discuss what you would like to change.
-
 ## Example .env File (in Backend folder)
 
 ```bash
 DATABASE_PASSWORD=808080
 ```
-
-## Contact
-
-For any inquiries or feedback, please email us at <sumeyyedilaradogan@gmail.com> or create an issue in the GitHub repository.
 
 ### App Screenshots
 
@@ -99,3 +83,19 @@ For any inquiries or feedback, please email us at <sumeyyedilaradogan@gmail.com>
 #### Downloaded Report (XLS)
 
 ![Downloaded Report (XLS)](https://i.imgur.com/a1JG4tk.png)
+
+## Contributing
+
+Contributions are welcome! If you wish to contribute to this project, follow these steps:
+
+1. Fork the repository.
+2. Create a new branch for your feature/bug fix.
+3. Make your changes and commit them with descriptive messages.
+4. Push your changes to your branch.
+5. Create a pull request detailing your changes and their purpose.
+
+> For major changes, please open an issue first to discuss what you would like to change.
+
+## Contact
+
+For any inquiries or feedback, please email us at <sumeyyedilaradogan@gmail.com> or create an issue in the GitHub repository.
