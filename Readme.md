@@ -21,14 +21,14 @@ git clone https://github.com/Sddilora/ServerManagement.git
 cd ServerManagement
 ```
 
-2. Build the backend
+2. Run the backend
 
 ```bash
 cd Backend
 .\mvnw.cmd spring-boot:run
 ```
 
-3. Build the frontend
+3. Build and Run the frontend
 
 ```bash
 cd Frontend
@@ -38,10 +38,12 @@ npm start
 
 ## Usage
 
-1. Run the Spring Boot backend and Angular frontend as instructed in the Installation section.
-2. Access the application in your web browser at <http://localhost:4200>.
-3. Log in with your credentials to access the server management dashboard.
-4. Explore the various features and functionalities of the application.
+1. Build the database using the provided SQL script in the Backend folder. (I used MySQL Workbench)
+2. Provide the database password in the .env file in the Backend folder.
+3. Run the Spring Boot backend and Angular frontend as instructed in the Installation section.
+4. Access the application in your web browser at <http://localhost:4200>.
+5. Log in with your credentials to access the server management dashboard.
+6. Explore the various features and functionalities of the application.
 
 ## Contributing
 
