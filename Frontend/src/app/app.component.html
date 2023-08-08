@@ -3,8 +3,8 @@
   <div class="table-responsive">
     <div class="table-wrapper">
       <div class="table-title">
-        <div class="row" style="display: flex; align-items: center; background-color: rgb(21, 81, 108); color: white; padding: 15px; margin-bottom: 10px">
-          <div class="col-sm-6">
+        <div class="row" style="display: flex; align-items: center; background-color: rgb(21, 81, 108); color: white; padding: 15px; margin-bottom: 10px; flex-direction: row; justify-content: space-between; ">
+          <div class="col-sm-6" style="min-width: 200px;">
             <h2>Manage Servers</h2>
           </div>
           <div class="col-sm-6" style="text-align: right; white-space: nowrap">
@@ -26,7 +26,7 @@
               href="#addEmployeeModal"
               class="btn btn-success"
               data-toggle="modal"
-              style="margin-left: 10px; align-items: center; display: inline-flex"
+              style="margin-left: 15px; align-items: center; display: inline-flex"
             >
               <i class="material-icons">&#xE147;</i>
               <span style="margin-left:5px ;">New Server</span>
@@ -36,7 +36,7 @@
               (click)="printReport()"
               type="button"
               class="btn btn-primary"
-              style="margin-left: 10px"
+              style="margin-left: 15px"
             >
               Print Report
             </button>

@@ -1,7 +1,7 @@
 
 @import url('https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css');
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css');
-/* @import '~angular-notifier/styles'; */
+/* @import '~/angular-notifier/styles'; */
 @import '../node_modules/angular-notifier/styles';
 
 body{
@@ -137,6 +137,11 @@ body{
  .note-has-grid .single-note-item.all-category.note-social .more-options {
      display: none
  }
+
+ /*  Override */
+ .table-responsive {
+      overflow-x: hidden
+  }
 
  @media (max-width:767.98px) {
      .note-has-grid .single-note-item {
