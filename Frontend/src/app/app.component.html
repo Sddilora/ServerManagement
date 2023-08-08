@@ -89,7 +89,7 @@
                 <td>{{ server.type }}</td>
                 <td>
                   <span
-                    class="badge"
+                    class="badge badge-pill"
                     [ngClass]="[
                       server.status === Status.SERVER_UP
                         ? ' badge-success'
@@ -106,7 +106,7 @@
                 <td>
                   <a
                     (click)="pingServer(server.ipAddr)"
-                    style="cursor: pointer"
+                    style="cursor: pointer; color: rgb(48, 76, 87);"
                   >
                     <i
                       *ngIf="
@@ -129,7 +129,7 @@
                     (click)="deleteServer(server)"
                     class="delete"
                     data-toggle="modal"
-                    style="cursor: pointer"
+                    style="cursor: pointer; color: rgb(189, 33, 33);"
                   >
                     <i
                       class="material-icons"

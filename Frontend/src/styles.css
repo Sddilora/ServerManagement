@@ -8,6 +8,11 @@ body{
     background: #edf1f5;
     margin-top:20px;
 }
+
+/* .badge-danger {
+    color: #fff;
+    background-color: #b91010;
+} */
 .card {
     position: relative;
     display: flex;
