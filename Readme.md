@@ -76,7 +76,7 @@ DATABASE_PASSWORD=808080
 
 ![Delete Server](https://i.imgur.com/DR3ymOR.gif)
 
-#### Print Report
+#### Print Report (Press the Print Report Button)
 
 ![Print Report](https://i.imgur.com/ZfgrEzg.png)
 
