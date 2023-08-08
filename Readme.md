@@ -55,6 +55,46 @@ Contributions are welcome! If you wish to contribute to this project, follow the
 
 > For major changes, please open an issue first to discuss what you would like to change.
 
+## Example .env File (in Backend folder)
+
+```bash
+DATABASE_PASSWORD=808080
+```
+
 ## Contact
 
 For any inquiries or feedback, please email us at <sumeyyedilaradogan@gmail.com> or create an issue in the GitHub repository.
+
+### App Screenshots
+
+#### Retrieve All Servers
+
+![Retrieve All Servers](https://i.imgur.com/3xlE4n2.png)
+
+#### Error Screen
+
+![Error Screen](https://i.imgur.com/jXVujZA.png)
+
+#### Ping Server
+
+![Ping Server](https://i.imgur.com/NYQYElj.gif)
+
+#### Add Server
+
+![Add Server](https://i.imgur.com/Gpp56GH.png)
+
+#### Server Created Successfully
+
+![Server Created Successfully](https://i.imgur.com/TtVqcJy.png)
+
+#### Delete Server
+
+![Delete Server](https://i.imgur.com/DR3ymOR.gif)
+
+#### Print Report
+
+![Print Report](https://i.imgur.com/ZfgrEzg.png)
+
+#### Downloaded Report (XLS)
+
+![Downloaded Report (XLS)](https://i.imgur.com/a1JG4tk.png)
